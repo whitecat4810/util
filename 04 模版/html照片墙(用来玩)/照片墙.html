@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>照片墙案例</title>
+		<meta charset="UTF-8"/>
+		<script src="jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function show(){
+				$("img").show(2000);
+			}
+		</script>
+		<!-- 声明css代码域 -->
+		<style type="text/css">
+			/*设置body样式*/
+			body{
+				text-align: center;
+				background-color: black;
+			}
+			/*设置图片样式*/
+			img{
+				display: none;
+				width: 12%;/*设置高度*/
+				padding: 10px;/*设置内边距*/
+				background-color: white;/*设置背景颜色*/
+				transform: rotate(-10deg);/*设置倾斜角度*/
+				margin: 20px;/*设置外边距*/
+			}
+			/*使用伪类给标签添加样式*/
+			img:hover{
+				transform: rotate(0deg) scale(1.5);/*设置旋转角度和缩放比例*/
+				z-index: 1;/*设置显示优先级别*/
+				transition: 1.5s;/*设置显示加载时间*/
+			}
+		</style>
+	</head>
+	<body onload="show()">
+		<img src="img/1.jpg" alt="" id="img01"/>
+		<img src="img/2.jpg" alt="" id="img02"/>
+		<img src="img/3.png" alt="" id="img03"/>
+		<img src="img/4.jpg" alt="" id="img04"/><br />
+		<img src="img/5.png" alt="" id="img05"/>
+		<img src="img/6.jpg" alt="" id="img06"/>
+		<img src="img/7.jpg" alt="" id="img07"/>
+		<img src="img/8.jpg" alt="" id="img08"/>
+	</body>
+</html>
